@@ -1,0 +1,86 @@
+[
+   {
+      "vcId": "PAPHGHVCC",
+      "vcStartDate": "2021-05-13T13:15:00",
+      "vcStartTime": "13:15",
+      "vcEndDate": "2021-05-13T13:30:00",
+      "vcEndTime": "13:30"
+   },
+   {
+      "vcId": "PAPHGHVCC",
+      "vcStartDate": "2021-05-13T13:30:00",
+      "vcStartTime": "13:30",
+      "vcEndDate": "2021-05-13T13:45:00",
+      "vcEndTime": "13:45"
+   },
+   {
+      "vcId": "PAPHGHVCC",
+      "vcStartDate": "2021-05-13T13:45:00",
+      "vcStartTime": "13:45",
+      "vcEndDate": "2021-05-13T14:00:00",
+      "vcEndTime": "14:00"
+   },
+   {
+      "vcId": "PAPHGHVCC",
+      "vcStartDate": "2021-05-13T14:00:00",
+      "vcStartTime": "14:00",
+      "vcEndDate": "2021-05-13T14:15:00",
+      "vcEndTime": "14:15"
+   },
+   {
+      "vcId": "PAPHGHVCC",
+      "vcStartDate": "2021-05-13T14:15:00",
+      "vcStartTime": "14:15",
+      "vcEndDate": "2021-05-13T14:30:00",
+      "vcEndTime": "14:30"
+   },
+   {
+      "vcId": "PAPHGHVCC",
+      "vcStartDate": "2021-05-13T14:45:00",
+      "vcStartTime": "14:45",
+      "vcEndDate": "2021-05-13T15:00:00",
+      "vcEndTime": "15:00"
+   },
+   {
+      "vcId": "PAPHGHVCC",
+      "vcStartDate": "2021-05-13T15:00:00",
+      "vcStartTime": "15:00",
+      "vcEndDate": "2021-05-13T15:15:00",
+      "vcEndTime": "15:15"
+   },
+   {
+      "vcId": "PAPHGHVCC",
+      "vcStartDate": "2021-05-13T15:15:00",
+      "vcStartTime": "15:15",
+      "vcEndDate": "2021-05-13T15:30:00",
+      "vcEndTime": "15:30"
+   },
+   {
+      "vcId": "PAPHGHVCC",
+      "vcStartDate": "2021-05-13T15:30:00",
+      "vcStartTime": "15:30",
+      "vcEndDate": "2021-05-13T15:45:00",
+      "vcEndTime": "15:45"
+   },
+   {
+      "vcId": "PAPHGHVCC",
+      "vcStartDate": "2021-05-13T15:45:00",
+      "vcStartTime": "15:45",
+      "vcEndDate": "2021-05-13T16:00:00",
+      "vcEndTime": "16:00"
+   },
+   {
+      "vcId": "PAPHGHVCC",
+      "vcStartDate": "2021-05-13T16:00:00",
+      "vcStartTime": "16:00",
+      "vcEndDate": "2021-05-13T16:15:00",
+      "vcEndTime": "16:15"
+   },
+   {
+      "vcId": "PAPHGHVCC",
+      "vcStartDate": "2021-05-13T16:15:00",
+      "vcStartTime": "16:15",
+      "vcEndDate": "2021-05-13T16:30:00",
+      "vcEndTime": "16:30"
+   }
+]

@@ -1,0 +1,37 @@
+[
+   {
+      "vcId": "LCAPORTVCB",
+      "vcStartDate": "2021-05-11T15:15:00",
+      "vcStartTime": "15:15",
+      "vcEndDate": "2021-05-11T15:30:00",
+      "vcEndTime": "15:30"
+   },
+   {
+      "vcId": "LCAPORTVCB",
+      "vcStartDate": "2021-05-11T15:30:00",
+      "vcStartTime": "15:30",
+      "vcEndDate": "2021-05-11T15:45:00",
+      "vcEndTime": "15:45"
+   },
+   {
+      "vcId": "LCAPORTVCB",
+      "vcStartDate": "2021-05-11T15:45:00",
+      "vcStartTime": "15:45",
+      "vcEndDate": "2021-05-11T16:00:00",
+      "vcEndTime": "16:00"
+   },
+   {
+      "vcId": "LCAPORTVCB",
+      "vcStartDate": "2021-05-14T14:45:00",
+      "vcStartTime": "14:45",
+      "vcEndDate": "2021-05-14T15:00:00",
+      "vcEndTime": "15:00"
+   },
+   {
+      "vcId": "LCAPORTVCB",
+      "vcStartDate": "2021-05-14T15:00:00",
+      "vcStartTime": "15:00",
+      "vcEndDate": "2021-05-14T15:15:00",
+      "vcEndTime": "15:15"
+   }
+]

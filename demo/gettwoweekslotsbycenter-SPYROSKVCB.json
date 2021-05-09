@@ -1,0 +1,51 @@
+[
+   {
+      "vcId": "SPYROSKVCB",
+      "vcStartDate": "2021-05-11T15:15:00",
+      "vcStartTime": "15:15",
+      "vcEndDate": "2021-05-11T15:30:00",
+      "vcEndTime": "15:30"
+   },
+   {
+      "vcId": "SPYROSKVCB",
+      "vcStartDate": "2021-05-11T15:30:00",
+      "vcStartTime": "15:30",
+      "vcEndDate": "2021-05-11T15:45:00",
+      "vcEndTime": "15:45"
+   },
+   {
+      "vcId": "SPYROSKVCB",
+      "vcStartDate": "2021-05-11T15:45:00",
+      "vcStartTime": "15:45",
+      "vcEndDate": "2021-05-11T16:00:00",
+      "vcEndTime": "16:00"
+   },
+   {
+      "vcId": "SPYROSKVCB",
+      "vcStartDate": "2021-05-11T16:15:00",
+      "vcStartTime": "16:15",
+      "vcEndDate": "2021-05-11T16:30:00",
+      "vcEndTime": "16:30"
+   },
+   {
+      "vcId": "SPYROSKVCB",
+      "vcStartDate": "2021-05-12T15:15:00",
+      "vcStartTime": "15:15",
+      "vcEndDate": "2021-05-12T15:30:00",
+      "vcEndTime": "15:30"
+   },
+   {
+      "vcId": "SPYROSKVCB",
+      "vcStartDate": "2021-05-12T15:30:00",
+      "vcStartTime": "15:30",
+      "vcEndDate": "2021-05-12T15:45:00",
+      "vcEndTime": "15:45"
+   },
+   {
+      "vcId": "SPYROSKVCB",
+      "vcStartDate": "2021-05-12T15:45:00",
+      "vcStartTime": "15:45",
+      "vcEndDate": "2021-05-12T16:00:00",
+      "vcEndTime": "16:00"
+   }
+]

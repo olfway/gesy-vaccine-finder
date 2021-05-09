@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        <title>GESY Vaccination</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    </head>
+    <body class="h-100" onload="load()">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            function update_gateway() {
+                let gatewayMessage = document.getElementById("gatewayMessage")
+                let gatewayStatus = document.getElementById("gatewayStatus")
+                let gatewayAge = document.getElementById("gatewayAge")
+                fetch("/gateway-status").then(response => response.json()).then(data => {
+                    gatewayStatus.innerText = data["isGatewayAvailable"] ? "OPEN" : "CLOSED"
+                    gatewayAge.innerText = data["upperAgeLimit"].split("T")[0] + " - " + data["ageLimit"].split("T")[0]
+                    if (data["descEn"]) {
+                        gatewayMessage.innerText = data["descEn"].replace(/\n+/g, "\n")
+                        gatewayMessage.style.display = ""
+                    }
+                })
+            }
+            function update_user_info() {
+                let appointmentName = document.getElementById("appointmentName")
+                let appointmentSurname = document.getElementById("appointmentSurname")
+                let appointmentDob = document.getElementById("appointmentDob")
+                let appointmentIdDocType = document.getElementById("appointmentIdDocType")
+                let appointmentIdNumber = document.getElementById("appointmentIdNumber")
+                let appointmentPhonenumber = document.getElementById("appointmentPhonenumber")
+                let appointmentEmail = document.getElementById("appointmentEmail")
+
+                fetch("/user-info").then(response => response.json()).then(data => {
+                    appointmentName.value = data["firstName"]
+                    appointmentSurname.value = data["lastName"]
+                    appointmentDob.value = data["dob"] + "T12:00"
+                    appointmentIdDocType.value = data["docIdType"]
+                    appointmentIdNumber.value = data["docId"]
+                    appointmentPhonenumber.value = "+357 " + data["mobile"]
+                    appointmentEmail.value = data["email"]
+                })
+            }
+            function update_timeslots_table() {
+                let timeslotsTable = document.getElementById("timeslots")
+                fetch("/vaccination-centers").then(response => response.json()).then(data => {
+                    let centersByCity = {}
+                    let centersListByCity = {}
+                    let allocationsDate = new Date()
+                    allocationsDate.setFullYear(parseInt(data["date"].split("-")[0]))
+                    allocationsDate.setMonth(
+                        parseInt(data["date"].split("-")[1]) - 1,
+                        parseInt(data["date"].split("-")[2].split("T")[0])
+                    )
+                    for (let center of data["allocations"]) {
+                        if (!centersByCity.hasOwnProperty(center["city"])) {
+                            centersByCity[center["city"]] = {}
+                            centersListByCity[center["city"]] = []
+                        }
+                        centersByCity[center["city"]][center["centerCd"]] = center
+                        centersListByCity[center["city"]].push(center["centerCd"])
+                    }
+                    let districtsRow = timeslotsTable.insertRow()
+                    let centersRow = timeslotsTable.insertRow()
+                    let cities = ["LIM", "PFO", "LCA", "NIC", "FAM"]
+
+                    let spaceHeader = document.createElement('th')
+                    spaceHeader.className="bg-dark text-white"
+                    spaceHeader.innerHTML = "&nbsp;"
+                    districtsRow.append(spaceHeader)
+
+                    spaceHeader = document.createElement('th')
+                    spaceHeader.className="bg-dark text-white"
+                    spaceHeader.innerHTML = "&nbsp;"
+                    centersRow.append(spaceHeader)
+
+                    for (let city of cities) {
+                        centersListByCity[city].sort()
+
+                        let districtHeader = document.createElement('th')
+                        districtHeader.className="bg-dark text-white"
+                        districtHeader.innerHTML = city
+                        districtHeader.colSpan = centersListByCity[city].length
+                        districtsRow.append(districtHeader)
+
+                        for (let centerName of centersListByCity[city]) {
+                            let center = centersByCity[city][centerName]
+                            let centerHeader = document.createElement('th')
+                            let centerShortId = centerName.slice(0, 1)
+                            if (centerName.slice(-2) === "VC") {
+                                centerShortId += "A"
+                            } else {
+                                centerShortId += centerName.slice(-1)
+                            }
+                            centerHeader.className="bg-dark text-white text-center p-1"
+                            centerHeader.innerHTML = `<span class="font-weight-normal">${centerShortId}</span>`
+                            centerHeader.title = center["center"]
+                            centerHeader.setAttribute("data-toggle", "tooltip")
+                            $(centerHeader).tooltip()
+                            centersRow.append(centerHeader)
+                        }
+                    }
+                    let startDate = allocationsDate
+                    startDate.setHours(8, 0, 0)
+                    let endDate = new Date(startDate.getTime() + 21 * 24 * 60 * 60 * 1000);
+                    for (let time = startDate; time < endDate; time = new Date(time.getTime() + 15 * 60 * 1000)) {
+                        if (time.getHours() === 18) {
+                            time = new Date(time.getTime() + 14 * 60 * 60 * 1000)
+                            if (time >= endDate) {
+                                break
+                            }
+                        }
+                        let timeString = ("0" + time.getDate()).slice(-2)
+                            + "." + ("0" + (time.getMonth()+1)).slice(-2)
+                            + " " + ("0" + time.getHours()).slice(-2)
+                            + ":" + ("0" + time.getMinutes()).slice(-2)
+
+                        let timeId = time.getFullYear()
+                            + "-" + ("0" + (time.getMonth()+1)).slice(-2)
+                            + "-" + ("0" + time.getDate()).slice(-2)
+                            + "T" + ("0" + time.getHours()).slice(-2)
+                            + ":" + ("0" + time.getMinutes()).slice(-2)
+
+                        let slotsRow = timeslotsTable.insertRow()
+                        slotsRow.style.display = "none"
+                        let timeHeader = document.createElement('td')
+                        timeHeader.innerHTML = timeString
+                        timeHeader.className = "bg-dark text-white text-center p-1 text-nowrap"
+                        slotsRow.append(timeHeader)
+                        for (let city of cities) {
+                            for (let centerCd of centersListByCity[city]) {
+                                let slotCol = document.createElement('td')
+                                let btn = document.createElement('button')
+                                btn.name = "timeslot"
+                                btn.id = `${timeId}@${centerCd}`
+                                btn.type = "button"
+                                btn.innerHTML = "&nbsp"
+                                btn.disabled = true
+                                btn.className = "btn btn-sm btn-block btn-secondary m-0"
+                                btn.addEventListener('click', function(){
+                                    show_appointment_dialog(timeId, centerCd, centersByCity[city][centerCd])
+                                })
+                                slotCol.append(btn)
+                                slotsRow.append(slotCol)
+                            }
+                        }
+                    }
+
+                    for (let city of cities) {
+                        for (let centerCd of centersListByCity[city]) {
+                            fetch("/vaccination-center-timeslots?center=" + centerCd).then(response => response.json()).then(data => {
+                                for (let timeslot of data) {
+                                    let btnId = timeslot["id"]
+                                    let btn = document.getElementById(btnId)
+                                    if (timeslot["type"] === "Pfizer-BioNTech") btn.className = btn.className.replace("btn-secondary", "btn-success")
+                                    else if (timeslot["type"] === "Moderna") btn.className = btn.className.replace("btn-secondary", "btn-primary")
+                                    else if (timeslot["type"] === "Johnson & Johnson") btn.className = btn.className.replace("btn-secondary", "btn-warning")
+                                    else if (timeslot["type"] === "AstraZeneca") btn.className = btn.className.replace("btn-secondary", "btn-danger")
+                                    else btn.className = btn.className.replace("btn-secondary", "btn-dark")
+                                    btn.disabled = false
+                                    btn.innerText = timeslot["type"].slice(0, 1)
+                                    btn.title = timeslot["centerName"]
+                                    btn.parentElement.parentElement.style.display = ""
+                                }
+                            })
+                        }
+                    }
+                })
+            }
+            function show_appointment_dialog(time, centerCd, center) {
+                document.getElementById("appointmentCenterName").innerText = center["center"]
+                document.getElementById("appointmentCenterType").innerText = center["type"]
+                document.getElementById("appointmentDateText").innerText = time.replace("T", " ")
+                document.getElementById("appointmentCenter").value = centerCd
+                document.getElementById("appointmentDate").value = time
+                $('#appointmentModal').modal('show')
+            }
+            window.onload = function() {
+                update_gateway()
+                update_user_info()
+                update_timeslots_table()
+            }
+        </script>
+        <header>
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="navbar-brand">GESY Vaccination</div>
+                <a class="btn btn-danger float-right" href="/logout">Logout</a>
+            </nav>
+        </header>
+
+        <main role="main">
+            <div class="container m-5">
+                <table id="gateway" class="table table-sm w-auto">
+                    <tbody>
+                        <tr><th class="text-nowrap text-right p-1">Status</th><td id="gatewayStatus"></td></tr>
+                        <tr><th class="text-nowrap text-right p-1">Age</th><td id="gatewayAge" class="text-nowrap"></td></tr>
+                    </tbody>
+                </table>
+                <div id="gatewayMessage" class="alert alert-danger" role="alert" style="display:none"></div>
+                <table id="timeslots" class="table table-bordered table-hover table-sm w-100"></table>
+            </div>
+        </main>
+        <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg ">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="appointmentModalLabel">Confirm appointment</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="appointmentCenterName"></p>
+                        <p id="appointmentCenterType"></p>
+                        <p id="appointmentDateText"></p>
+                        <form id="appointmentForm" action="/appointment" method="post">
+                            <table class="table table-sm w-auto p-0">
+                                <tbody>
+                                <tr>
+                                    <td><label for="appointmentName">First Name</label>
+                                        <input type="text" id="appointmentName" name="name" class="form-control form-control-sm" placeholder="First Name"></td>
+                                    <td><label for="appointmentSurname">Last Name</label>
+                                        <input type="text" id="appointmentSurname" name="surname" class="form-control form-control-sm" placeholder="Last Name"></td>
+                                    <td><label for="appointmentDob">Birthday</label>
+                                        <input type="text" id="appointmentDob" name="dob" class="form-control form-control-sm" placeholder="Date of birth, like 1980-02-29"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="appointmentIdDocType">Document Type</label>
+                                        <select id="appointmentIdDocType" name="idDocType" class="form-control form-control-sm">
+                                            <option value="ARC">Alien Registration Certificate</option>
+                                            <option value="NID">Identity Card</option>
+                                        </select>
+                                    </td>
+                                    <td><label for="appointmentIdNumber">Document Number</label>
+                                        <input type="text" id="appointmentIdNumber" name="idNumber" class="form-control form-control-sm" placeholder="ID Number"></td>
+                                    <td>
+                                        <label for="appointmentCity">City</label>
+                                        <select id="appointmentCity" name="city" class="form-control form-control-sm">
+                                            <option value="">Please, select district</option>
+                                            <option value="LIM">LIMASOL</option>
+                                            <option value="LA">LARNACA</option>
+                                            <option value="PFO">PAFOS</option>
+                                            <option value="NIC">NICOSIA</option>
+                                            <option value="FAM">FAMAGUSTA</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="appointmentPhonenumber">Mobile Phone</label>
+                                        <input type="text" id="appointmentPhonenumber" name="phonenumber" class="form-control form-control-sm" placeholder="Mobile phone, like 96930102"></td>
+                                    <td><label for="appointmentEmail">Email</label>
+                                        <input type="text" id="appointmentEmail" name="email" class="form-control form-control-sm" placeholder="Email"></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <input type="hidden" id="appointmentCenter" name="vcCenter">
+                            <input type="hidden" id="appointmentDate" name="vcDate">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" onclick="document.getElementById('appointmentForm').submit()">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

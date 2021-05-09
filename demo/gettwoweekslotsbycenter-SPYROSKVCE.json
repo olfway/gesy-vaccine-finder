@@ -1,0 +1,23 @@
+[
+   {
+      "vcId": "SPYROSKVCE",
+      "vcStartDate": "2021-05-10T09:15:00",
+      "vcStartTime": "09:15",
+      "vcEndDate": "2021-05-10T09:30:00",
+      "vcEndTime": "09:30"
+   },
+   {
+      "vcId": "SPYROSKVCE",
+      "vcStartDate": "2021-05-10T09:30:00",
+      "vcStartTime": "09:30",
+      "vcEndDate": "2021-05-10T09:45:00",
+      "vcEndTime": "09:45"
+   },
+   {
+      "vcId": "SPYROSKVCE",
+      "vcStartDate": "2021-05-10T09:45:00",
+      "vcStartTime": "09:45",
+      "vcEndDate": "2021-05-10T10:00:00",
+      "vcEndTime": "10:00"
+   }
+]

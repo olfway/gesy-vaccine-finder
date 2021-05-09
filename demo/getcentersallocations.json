@@ -1,0 +1,149 @@
+{
+   "date": "2021-05-08T00:00:00",
+   "allocations": [
+      {
+         "center": "NICOSIA – Latsia Health Centre C",
+         "type": "Johnson & Johnson",
+         "city": "NIC",
+         "centerCd": "LATSVCC"
+      },
+      {
+         "center": "NICOSIA – Lakatameia Health Centre B",
+         "type": "Pfizer-BioNTech(13/5/2021) / Moderna(20,21,22/5/2021)",
+         "city": "NIC",
+         "centerCd": "LAKVCB"
+      },
+      {
+         "center": "NICOSIA –  Cyprus Expo A",
+         "type": "AstraZeneca",
+         "city": "NIC",
+         "centerCd": "KRATEKTHVC"
+      },
+      {
+         "center": "NICOSIA - Cyprus Expo E",
+         "type": "Pfizer-BioNTech",
+         "city": "NIC",
+         "centerCd": "KRATEKTHVCE"
+      },
+      {
+         "center": "LEMESOS – Spyros Kyprianou AC A",
+         "type": "AstraZeneca",
+         "city": "LIM",
+         "centerCd": "SPYROSKVC"
+      },
+      {
+         "center": "LEMESOS – Spyros Kyprianou AC B",
+         "type": "Pfizer-BioNTech",
+         "city": "LIM",
+         "centerCd": "SPYROSKVCB"
+      },
+      {
+         "center": "LEMESOS - Spyros Kyprianou AC E",
+         "type": "Pfizer-BioNTech",
+         "city": "LIM",
+         "centerCd": "SPYROSKVCE"
+      },
+      {
+         "center": "LEMESOS -  Old Limassol Hospital A",
+         "type": "Moderna",
+         "city": "LIM",
+         "centerCd": "OLDLIMVC"
+      },
+      {
+         "center": "LEMESOS -  Old Limassol Hospital B",
+         "type": "Moderna",
+         "city": "LIM",
+         "centerCd": "OLDLIMVCB"
+      },
+      {
+         "center": "LEMESOS -  Linopetra Health Centre A",
+         "type": "Moderna",
+         "city": "LIM",
+         "centerCd": "LINOPVC"
+      },
+      {
+         "center": "LEMESOS -  Linopetra Health Centre B",
+         "type": "Moderna",
+         "city": "LIM",
+         "centerCd": "LINOPVCB"
+      },
+      {
+         "center": "LEMESOS - Linopetra Health Center C",
+         "type": "Johnson & Johnson",
+         "city": "LIM",
+         "centerCd": "LINOPVCC"
+      },
+      {
+         "center": "LARNACA – Larnaca Old Hospital B",
+         "type": "Johnson & Johnson",
+         "city": "LCA",
+         "centerCd": "OLDLCAVCB"
+      },
+      {
+         "center": "LARNACA – Port A",
+         "type": "AstraZeneca",
+         "city": "LCA",
+         "centerCd": "LCAPORTVC"
+      },
+      {
+         "center": "LARNACA – Port B",
+         "type": "Pfizer-BioNTech",
+         "city": "LCA",
+         "centerCd": "LCAPORTVCB"
+      },
+      {
+         "center": "LARNACA - Port C",
+         "type": "Moderna",
+         "city": "LCA",
+         "centerCd": "LCAPORTVCC"
+      },
+      {
+         "center": "PAFOS - Pafos General Hospital C",
+         "type": "Johnson & Johnson",
+         "city": "PFO",
+         "centerCd": "PAPHGHVCC"
+      },
+      {
+         "center": "PAFOS – Polis Chrysochous Hospital",
+         "type": "Pfizer-BioNTech",
+         "city": "PFO",
+         "centerCd": "POLISVC"
+      },
+      {
+         "center": "PAFOS- PALIA ILEKTRIKI A",
+         "type": "AstraZeneca",
+         "city": "PFO",
+         "centerCd": "OLDPHPAPHVC"
+      },
+      {
+         "center": "PAFOS- PALIA ILEKTRIKI B",
+         "type": "Pfizer-BioNTech",
+         "city": "PFO",
+         "centerCd": "OLDPHPAPHVCB"
+      },
+      {
+         "center": "PAFOS- PALIA ILEKTRIKI C",
+         "type": "Moderna",
+         "city": "PFO",
+         "centerCd": "OLDPHPAPHVCC"
+      },
+      {
+         "center": "AMMOCHOSTOS – Ammochostos Health Centre B",
+         "type": "Pfizer-BioNTech",
+         "city": "FAM",
+         "centerCd": "FAMVCB"
+      },
+      {
+         "center": "AMMOCHOSTOS – Health Centre D",
+         "type": "Johnson & Johnson(10/5/2021) / Moderna(13/5/2021) / AstraZeneca(15/5/2021) / Pfizer-BioNTech(19/5/2021)",
+         "city": "FAM",
+         "centerCd": "FAMVCD"
+      },
+      {
+         "center": "NICOSIA – Lakatameia Health Centre A",
+         "type": "Pfizer-BioNTech(13/5/2021) / Moderna(20,21,24/5/2021)",
+         "city": "NIC",
+         "centerCd": "LAKVC"
+      }
+   ]
+}

@@ -1,0 +1,268 @@
+[
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T08:00:00",
+      "vcStartTime": "08:00",
+      "vcEndDate": "2021-05-13T08:15:00",
+      "vcEndTime": "08:15"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T08:15:00",
+      "vcStartTime": "08:15",
+      "vcEndDate": "2021-05-13T08:30:00",
+      "vcEndTime": "08:30"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T08:30:00",
+      "vcStartTime": "08:30",
+      "vcEndDate": "2021-05-13T08:45:00",
+      "vcEndTime": "08:45"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T08:45:00",
+      "vcStartTime": "08:45",
+      "vcEndDate": "2021-05-13T09:00:00",
+      "vcEndTime": "09:00"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T09:00:00",
+      "vcStartTime": "09:00",
+      "vcEndDate": "2021-05-13T09:15:00",
+      "vcEndTime": "09:15"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T09:15:00",
+      "vcStartTime": "09:15",
+      "vcEndDate": "2021-05-13T09:30:00",
+      "vcEndTime": "09:30"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T09:30:00",
+      "vcStartTime": "09:30",
+      "vcEndDate": "2021-05-13T09:45:00",
+      "vcEndTime": "09:45"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T09:45:00",
+      "vcStartTime": "09:45",
+      "vcEndDate": "2021-05-13T10:00:00",
+      "vcEndTime": "10:00"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T10:00:00",
+      "vcStartTime": "10:00",
+      "vcEndDate": "2021-05-13T10:15:00",
+      "vcEndTime": "10:15"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T10:15:00",
+      "vcStartTime": "10:15",
+      "vcEndDate": "2021-05-13T10:30:00",
+      "vcEndTime": "10:30"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T10:30:00",
+      "vcStartTime": "10:30",
+      "vcEndDate": "2021-05-13T10:45:00",
+      "vcEndTime": "10:45"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T10:45:00",
+      "vcStartTime": "10:45",
+      "vcEndDate": "2021-05-13T11:00:00",
+      "vcEndTime": "11:00"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T11:00:00",
+      "vcStartTime": "11:00",
+      "vcEndDate": "2021-05-13T11:15:00",
+      "vcEndTime": "11:15"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T11:15:00",
+      "vcStartTime": "11:15",
+      "vcEndDate": "2021-05-13T11:30:00",
+      "vcEndTime": "11:30"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T11:30:00",
+      "vcStartTime": "11:30",
+      "vcEndDate": "2021-05-13T11:45:00",
+      "vcEndTime": "11:45"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T11:45:00",
+      "vcStartTime": "11:45",
+      "vcEndDate": "2021-05-13T12:00:00",
+      "vcEndTime": "12:00"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T12:00:00",
+      "vcStartTime": "12:00",
+      "vcEndDate": "2021-05-13T12:15:00",
+      "vcEndTime": "12:15"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T12:15:00",
+      "vcStartTime": "12:15",
+      "vcEndDate": "2021-05-13T12:30:00",
+      "vcEndTime": "12:30"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T12:30:00",
+      "vcStartTime": "12:30",
+      "vcEndDate": "2021-05-13T12:45:00",
+      "vcEndTime": "12:45"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T12:45:00",
+      "vcStartTime": "12:45",
+      "vcEndDate": "2021-05-13T13:00:00",
+      "vcEndTime": "13:00"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T13:00:00",
+      "vcStartTime": "13:00",
+      "vcEndDate": "2021-05-13T13:15:00",
+      "vcEndTime": "13:15"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T13:15:00",
+      "vcStartTime": "13:15",
+      "vcEndDate": "2021-05-13T13:30:00",
+      "vcEndTime": "13:30"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T13:30:00",
+      "vcStartTime": "13:30",
+      "vcEndDate": "2021-05-13T13:45:00",
+      "vcEndTime": "13:45"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T13:45:00",
+      "vcStartTime": "13:45",
+      "vcEndDate": "2021-05-13T14:00:00",
+      "vcEndTime": "14:00"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T14:00:00",
+      "vcStartTime": "14:00",
+      "vcEndDate": "2021-05-13T14:15:00",
+      "vcEndTime": "14:15"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T14:15:00",
+      "vcStartTime": "14:15",
+      "vcEndDate": "2021-05-13T14:30:00",
+      "vcEndTime": "14:30"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T14:30:00",
+      "vcStartTime": "14:30",
+      "vcEndDate": "2021-05-13T14:45:00",
+      "vcEndTime": "14:45"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T14:45:00",
+      "vcStartTime": "14:45",
+      "vcEndDate": "2021-05-13T15:00:00",
+      "vcEndTime": "15:00"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T15:00:00",
+      "vcStartTime": "15:00",
+      "vcEndDate": "2021-05-13T15:15:00",
+      "vcEndTime": "15:15"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T15:15:00",
+      "vcStartTime": "15:15",
+      "vcEndDate": "2021-05-13T15:30:00",
+      "vcEndTime": "15:30"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T15:30:00",
+      "vcStartTime": "15:30",
+      "vcEndDate": "2021-05-13T15:45:00",
+      "vcEndTime": "15:45"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T15:45:00",
+      "vcStartTime": "15:45",
+      "vcEndDate": "2021-05-13T16:00:00",
+      "vcEndTime": "16:00"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T16:00:00",
+      "vcStartTime": "16:00",
+      "vcEndDate": "2021-05-13T16:15:00",
+      "vcEndTime": "16:15"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T16:15:00",
+      "vcStartTime": "16:15",
+      "vcEndDate": "2021-05-13T16:30:00",
+      "vcEndTime": "16:30"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T16:30:00",
+      "vcStartTime": "16:30",
+      "vcEndDate": "2021-05-13T16:45:00",
+      "vcEndTime": "16:45"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T16:45:00",
+      "vcStartTime": "16:45",
+      "vcEndDate": "2021-05-13T17:00:00",
+      "vcEndTime": "17:00"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T17:00:00",
+      "vcStartTime": "17:00",
+      "vcEndDate": "2021-05-13T17:15:00",
+      "vcEndTime": "17:15"
+   },
+   {
+      "vcId": "KRATEKTHVC",
+      "vcStartDate": "2021-05-13T17:15:00",
+      "vcStartTime": "17:15",
+      "vcEndDate": "2021-05-13T17:30:00",
+      "vcEndTime": "17:30"
+   }
+]
